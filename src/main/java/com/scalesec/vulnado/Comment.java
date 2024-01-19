@@ -61,7 +61,8 @@ public class Comment {
 
   public static Boolean delete(String id) {
     try {
-      String sql = "DELETE FROM comments where id = ?";
+      String sql = "DELETE FROM comments where id = '" + id + "'";
+      sql = "DELETE FROM comments where id = ?";
       Connection con = Postgres.connection();
       PreparedStatement pStatement = con.prepareStatement(sql);
       pStatement.setString(1, id);

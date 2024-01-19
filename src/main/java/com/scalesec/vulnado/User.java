@@ -47,7 +47,7 @@ public class User {
       String query = "select * from users where username = '" + un + "' limit 1";
       System.out.println(query);
       String tempPwd = "P@ssw0rd!";
-      query = "select * from users where username = '" + un + "' and password = '" + tempPwd + "' limit 1";
+      query = "select * from users where username = '" + un + "' and password = '" + tempPwd;
       ResultSet rs = stmt.executeQuery(query);
       if (rs.next()) {
         String user_id = rs.getString("user_id");
